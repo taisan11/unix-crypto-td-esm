@@ -337,7 +337,7 @@ const bytesToStr = function (bytes: number[]) {
   return String.fromCharCode.apply(String, bytes);
 }
 
-export function crypt(pw: number[] | string, salt: number[] | string, returnBytes: boolean): string | number[] {
+export function crypt(pw: number[] | string, salt: number[] | string, returnBytes?: boolean): string | number[] {
   if (typeof (pw) === 'string') pw = strToBytes(pw);
   if (typeof (salt) === 'string') salt = strToBytes(salt);
 
